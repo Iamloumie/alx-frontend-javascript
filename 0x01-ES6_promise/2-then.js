@@ -10,7 +10,5 @@ export default function handleResponseFromAPI(promise) {
     }))
     .catch(() => new Error())
     // .finally() is called regardless of the promise's outcome
-    .finally(() => {
-      console.log('Got a response from the API');
-    });
+    .finally(() => console.log('Got a response from the API'));
 }
