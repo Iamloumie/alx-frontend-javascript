@@ -1,4 +1,4 @@
-import { uploadPhoto, createUser } from './utils.js';
+import { uploadPhoto, createUser } from './utils';
 
 // The function asyncUploadUser is an async function that uploads a photo and creates a user.
 // It returns a promise that resolves to an object containing the photo and user.
