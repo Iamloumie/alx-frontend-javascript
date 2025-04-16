@@ -8,10 +8,8 @@ export default function handleResponseFromAPI(promise) {
       status: 200,
       body: 'Success',
     }))
-    .catch(() => ({
-      status: 500,
-      body: 'Error',
-    }))
+    .catch(() => new Error())
+    // .finally() is called regardless of the promise's outcome
     .finally(() => {
       console.log('Got a response from the API');
     });
