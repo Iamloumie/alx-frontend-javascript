@@ -2,9 +2,11 @@ export default class Car {
   constructor(brand, motor, color) {
     if (typeof brand !== 'string') {
       throw new TypeError('brand must be a string');
-    } else if (typeof motor !== 'string') {
+    }
+    if (typeof motor !== 'string') {
       throw new TypeError('motor must be a string');
-    } else if (typeof color !== 'string') {
+    }
+    if (typeof color !== 'string') {
       throw new TypeError('color must be a string');
     }
 
@@ -13,7 +15,13 @@ export default class Car {
     this._color = color;
   }
 
+  // Using Symbol to create unique identifier for the cloneCar method
+  [Symbol('cloneCar')]() {
+    return new this.constructor(this._brand, this._motor, this._color);
+  }
+
+  // Public method that uses the Symbol method
   cloneCar() {
-    return new this.constructor();
+    return this[Object.getOwnPropertySymbols(this.constructor.prototype)[0]]();
   }
 }
