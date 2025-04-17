@@ -1,10 +1,15 @@
-import Classroom from './0-classroom';
+import ClassRoom from './0-classroom';
 
 /**
- * @returns {Array} an array of Classroom objects
- * with different maximum number of students
+ * Initializes class rooms with a specific number of students.
+ *
+ * This function creates class rooms with a predefined number of maximum students.
+ *
+ * @returns {Array<ClassRoom>} An array of ClassRoom instances with different
+ * maximum student capacities.
  */
 export default function initializeRooms() {
-  const classroomsSize = [19, 20, 24];
-  return classroomsSize.map((students) => new Classroom(students));
+  const maxStudents = [19, 20, 34];
+
+  return maxStudents.map((students) => new ClassRoom(students));
 }
