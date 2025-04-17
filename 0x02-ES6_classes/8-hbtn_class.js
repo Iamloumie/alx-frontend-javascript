@@ -10,29 +10,11 @@ export default class ALXClass {
     this._location = location;
   }
 
-  get size() {
+  valueOf() {
     return this._size;
   }
 
-  set size(value) {
-    if (typeof value !== 'number') {
-      throw new TypeError('size must be a number');
-    }
-    this._size = value;
-  }
-
-  get location() {
-    return this._location;
-  }
-
-  set location(value) {
-    if (typeof value !== 'string') {
-      throw new TypeError('location must be a string');
-    }
-    this._location = value;
-  }
-
-  tostring() {
+  toString() {
     return this._location;
   }
 }
