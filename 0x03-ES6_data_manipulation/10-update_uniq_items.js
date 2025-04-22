@@ -1,7 +1,7 @@
 /** Function that returns an updated map for all items with initial quantity at 1 */
 export default function updateUniqItems(map) {
   if (!(map instanceof Map)) {
-    throw new TypeError('Expected a Map');
+    throw new TypeError('Cannot process');
   }
 
   map.forEach((value, key) => {
