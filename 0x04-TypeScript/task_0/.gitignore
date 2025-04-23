@@ -1,0 +1,17 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore compiled output
+dist/
+
+# Ignore the following extensions
+
+*.log
+*.tmp
+*.swp
+
+# Ignore all these files
+package.json
+.eslintrc.js 
+tsconfig.json
+webpack.config.js
